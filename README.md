@@ -31,3 +31,45 @@ This project is a Symfony-based backend application that includes:
 
 6. **Data Validation**:
    - Assertions and custom validation rules for entities.
+
+
+
+## Installation
+
+### Prerequisites
+- PHP 8.1 or higher
+- Composer
+- Node.js and npm
+- Symfony CLI
+- A database (e.g., MySQL or PostgreSQL)
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+
+2. Install PHP dependencies:
+```bash
+   composer install
+```
+3. Install JavaScript dependencies:
+```bash
+   npm install
+```
+4. Configure environment variables:
+```bash
+Copy .env to .env.local:
+cp .env .env.local
+```
+5. Update database and mailer service configurations in .env.local.
+- Generate JWT keys:
+```bash
+php bin/console lexik:jwt:generate-keypair
+Run database migrations:
+php bin/console doctrine:migrations:migrate
+```
+6. Start the Symfony server:
+```bash
+symfony server:start
+```
