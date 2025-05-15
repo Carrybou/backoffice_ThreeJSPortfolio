@@ -17,9 +17,8 @@ services:
         arguments:
             $urlGenerator: '@router'
     App\:
-        resource: '../src/'
-        exclude:
-            - '../src/{DependencyInjection,Entity,Tests,Kernel.php}'
+        resource: '../src/*'
+        exclude: '../src/{DependencyInjection,Entity,Tests,Kernel.php}'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
